@@ -1,6 +1,7 @@
 package com.anupam.list;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by ANUPAM DUBE on Aug, 2018
@@ -8,9 +9,18 @@ import java.util.ArrayList;
 public class MobilePhone {
 
     private ContactList contact;
-    private ArrayList<ContactList> contactArray;
+    private static MobilePhone mobilePhone;
+    private static ArrayList<ContactList> contactArray;// = new ArrayList<ContactList>();
 
-    public MobilePhone() {
+    public static  MobilePhone getSingletonMobilePhone() {
+        if (mobilePhone == null) {
+            return new MobilePhone();
+        }else
+            System.out.println("contactArray object already in memory");
+        return mobilePhone;
+
+    }
+    private MobilePhone() {
         contactArray = new ArrayList<ContactList>();
     }
 
@@ -20,7 +30,7 @@ public class MobilePhone {
 
     public boolean addNewContact(ContactList contact) {
         int index = findContact(contact);
-        if (index > 0) {
+        if (index >= 0) {
             System.out.println(contact.getName()+" contact already in file");
             return false;
         }
@@ -38,5 +48,14 @@ public class MobilePhone {
 //
 //            }
 //        }
+    }
+
+    public void printMobilePhoneList() {
+        Iterator itr = contactArray.iterator();
+        ContactList contact;
+        while (itr.hasNext()) {
+            contact = (ContactList)itr.next();
+            System.out.println("Name: "+contact.getName()+" -> "+contact.getPhoneNumber());
+        }
     }
 }
