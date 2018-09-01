@@ -22,18 +22,18 @@ public class MyLinkedList {
 
     }
 
-    private static void printCity(LinkedList<String> list) {
+    public static void printCity(LinkedList<String> list) {
         Iterator itr = list.iterator();
         while (itr.hasNext()) {
             System.out.println("City Names: " + itr.next());
         }
 
     }
-    private static boolean addItemInLinkedList(String cityName, LinkedList list) {
+    public static boolean addItemInLinkedList(String cityName, LinkedList list) {
         //Iterator itr = list.iterator();
-        ListIterator<String> itr = list.listIterator();
-        while (itr.hasNext()) {
-            int compare = itr.next().compareTo(cityName);
+        ListIterator<String> listStringIterator = list.listIterator();
+        while (listStringIterator.hasNext()) {
+            int compare = listStringIterator.next().compareTo(cityName);
             System.out.println("compare val: " + compare);
             if (compare == 0) {
                 System.out.println(cityName  + " city alread added!!!!");
@@ -41,15 +41,15 @@ public class MyLinkedList {
 
             } else if (compare > 0) {
                 System.out.println("compare > 0");
-                itr.previous();
-                itr.add(cityName);
+                listStringIterator.previous();
+                listStringIterator.add(cityName);
                 return true;
             } else if (compare < 0) {
                 System.out.println("value lessthan");
                 //return;
             }
         }
-        itr.add(cityName);
+        listStringIterator.add(cityName);
         return true;
 
     }
