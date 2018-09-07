@@ -21,6 +21,7 @@ public class PreviousAndNextLinkedList {
         MyLinkedList.addItemInLinkedList("Madhu",myName);
         MyLinkedList.addItemInLinkedList("Arvind",myName);
         MyLinkedList.printCity(myName);
+//        City(myName);
 
         boolean run = true;
         ListIterator listItr = myName.listIterator();
