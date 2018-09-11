@@ -1,7 +1,7 @@
 package com.anupam.concurrency;
 
 /**
- * Created by timbuchalka on 25/05/2016.
+ * Created by Anupam Dubey on 02/09/2018.
  */
 public class ThreadColor {
     public static final String ANSI_RESET = "\u001B[0m";
