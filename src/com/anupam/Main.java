@@ -3,7 +3,6 @@ package com.anupam;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
 
         int number = 15;
         if (number < 5) {
@@ -20,5 +19,6 @@ public class Main {
                 System.out.println();
             }
         }
+
     }
 }
