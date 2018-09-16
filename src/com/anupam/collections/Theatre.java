@@ -9,7 +9,7 @@ import java.util.List;
  **/
 public class Theatre {
     private String threatreName;
-    private Collection<Seat> seat = new ArrayList<>();
+    private List<Seat> seat = new ArrayList<>();
 
     public Theatre(String threatreName, int numRows, int seatsPerRow) {
         this.threatreName = threatreName;
@@ -32,6 +32,7 @@ public class Theatre {
             System.out.println("" + seat.getSeatNumber());
         }
     }
+    
 
 
 
