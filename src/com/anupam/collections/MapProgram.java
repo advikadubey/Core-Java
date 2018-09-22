@@ -15,9 +15,13 @@ public class MapProgram {
         myMap.put("104", "Madhu");
 
         System.out.println(myMap.put("101","Dubey"));
-        
+
         for (String key : myMap.keySet()) {
             System.out.println("" + key + " :-> "+myMap.get(key));
+        }
+        String [] strings = "A man who is walking in street".split(" ");
+        for (String s : strings) {
+            System.out.println(" : " + s);
         }
     }
 }
