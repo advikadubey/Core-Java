@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by ANUPAM DUBE on Sep, 2018
+ * Created by ANUPAM DUBEY on Sep, 2018
  **/
 public class Student_Set implements Comparable<Student_Set>{
     private String name;
